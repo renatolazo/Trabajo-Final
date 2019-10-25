@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1572015201 source:d:\renatoucsp\trabajof\trabajofinal\main.cpp
+	<iostream>
+	<math.h>
+	<stdio.h>
+	"Cuenta.h"
+	"Libro.h"
+
+1572014578 source:d:\renatoucsp\trabajof\trabajofinal\src\cuenta.cpp
+	<iostream>
+	"Cuenta.h"
+
+1572014797 d:\renatoucsp\trabajof\trabajofinal\cuenta.h
+	<iostream>
+
+1572015296 d:\renatoucsp\trabajof\trabajofinal\libro.h
+	<iostream>
+
