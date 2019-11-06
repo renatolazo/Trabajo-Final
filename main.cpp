@@ -30,31 +30,63 @@ using namespace std;
                     cout << "\n   2. Raul" << endl;
                     cout << "\n   3. Miguel" << endl;
                     cout << "\n\n    Introduzca una opcion (1-3)" << endl;
+                    cin >> x;
                     switch ( x )
                     {
-                        case 1: cout << "\n   1. Mis Libros 1" << endl;
+                        case 1: int l1;
+                                cout << "\n   1. Mis Libros 1" << endl;
                                 cout << "\n   2. Libros" << endl;
+                                cout << "\n\n   Introduzca una opcion (1-2)" << endl;
+                                cin >> l1;
+                                switch ( l1 )
+                                {
+                                    case 1: cout << "\n   Los Miserables, Harry Potter" << endl;
+                                            break;
+                                    case 2: cout << "\n   Game of Thrones, Harry Potter, Los Juegos del Hambre" << endl;
+                                            break;
+                                }
                                 break;
-                        case 2: cout << "\n   1. Mis Libros 2" << endl;
+                        case 2: int l2;
+                                cout << "\n   1. Mis Libros 2" << endl;
                                 cout << "\n   2. Libros" << endl;
+                                cout << "\n\n   Introduzca una opcion (1-2)" << endl;
+                                cin >> l2;
+                                switch ( l2 )
+                                {
+                                    case 1: cout << "\n   Los Miserables, Los Juegos del Hambre" << endl;
+                                            break;
+                                    case 2: cout << "\n   Game of Thrones, Harry Potter, Los Juegos del Hambre" << endl;
+                                            break;
+                                }
                                 break;
-                        case 3: cout << "\n   1. Mis Libros 3" << endl;
+                        case 3: int l3;
+                                cout << "\n   1. Mis Libros 3" << endl;
                                 cout << "\n   2. Libros" << endl;
+                                cout << "\n\n   Introduzca una opcion (1-2)" << endl;
+                                cin >> l3;
+                                switch ( l3 )
+                                {
+                                    case 1: cout << "\n   Los Miserables, Game of Thrones" << endl;
+                                            break;
+                                    case 2: cout << "\n   Game of Thrones, Harry Potter, Los Juegos del Hambre" << endl;
+                                            break;
+                                }
                                 break;
                     }
                     break;
             case 2: int y;
                     cout << "\n   1. Autores" << endl;
-                    cout << "\n   2. Obras" << endl;
+                    cout << "\n   2. Obras Destacadas" << endl;
                     cout << "\n   3. Librerias" << endl;
                     cout << "\n\n    Introduzca una opcion (1-3)" << endl;
+                    cin >> y;
                     switch ( y )
                     {
-                        case 1: cout << "Charles Dickens, Edgar Alan Poe, Stephen King" << endl;
+                        case 1: cout << "\n   Charles Dickens, Edgar Alan Poe, Stephen King" << endl;
                                 break;
-                        case 2: cout << "Game of Thrones, Harry Potter, Los Juegos del Hambre" << endl;
+                        case 2: cout << "\n   Game of Thrones, Harry Potter, Los Juegos del Hambre" << endl;
                                 break;
-                        case 3: cout << "Livraria Ler Devagar, Atlantis Books, Barter Books" << endl;
+                        case 3: cout << "\n   Livraria Ler Devagar, Atlantis Books, Barter Books" << endl;
                                 break;
                     }
                     break;
@@ -68,11 +100,11 @@ class Cuenta
 {
 private:
     string user;
-    string contrasena;
+    int contrasena;
 public:
-    Cuenta(string, string);
+    Cuenta(string, int);
     void ObtenerUser();
-    void ObtenerContr();
+    int ObtenerContr();
     void entrar();
 };
 
@@ -112,7 +144,7 @@ public:
     void lugar();
 };
 
-Cuenta::Cuenta(string _user, string _contrasena)
+Cuenta::Cuenta(string _user, int _contrasena)
 {
     user = _user;
     contrasena = _contrasena;
@@ -125,9 +157,9 @@ void Cuenta::ObtenerUser()
 {
     cout << user << endl;
 }
-void Cuenta::ObtenerContr()
+int Cuenta::ObtenerContr()
 {
-    cout << contrasena << endl;
+    return contrasena;
 }
 
 Libro::Libro(int _fecha, string _autor, string _genero, string _editorial)
@@ -185,21 +217,28 @@ void Libreria::lugar()
 
 int main()
 {
-    int p1_int;
+    int p1_int, c1_int, contr1 = 2000;
     string p1_str;
     cout << "escriba su edad: ";
     cin >> p1_int;
     cout << "escriba su nombre: ";
     cin >> p1_str;
-    Cuenta c1 = Cuenta("Raul", "123");
-    Cuenta c2("Jose", "123");
+    cout << "escriba su contrasena: ";
+    cin >> c1_int;
+    Cuenta c1 = Cuenta("Raul", c1_int);
+    Cuenta c2("Jose", 321);
     Libreria li1 = Libreria("calle1", "ciudad1");
     Libreria li2("calle2", "ciudad2");
     Persona p1 = Persona(p1_int, p1_str);
     Persona p2(15, "Sophia");
     Libro l1 = Libro(2001, "Renato", "Accion", "CSIC");
     Libro l2(1999, "Maria", "Comedia", "CSIC");
-    c1.entrar();
+    if (c1.ObtenerContr() != contr1)
+        cout << "Contraseña incorrecta" << endl;
+    else{
+        cout << "Bienvenido" << endl;
+        c1.entrar();
+    }
     li1.sitio();
     li2.lugar();
     if (p1.ObtenerEdad() <= 17){
