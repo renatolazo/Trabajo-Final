@@ -1,22 +1,25 @@
 #include <iostream>
-#include "Libro.h"
+#include "Cuenta.h"
 
 using namespace std;
 
-Libro::Libro(int _fecha, string _autor, string _genero, string _editorial)
+Cuenta::Cuenta(string _user, string _contrasena)
 {
-    fecha = _fecha;
-    autor = _autor;
-    genero = _genero;
-    editorial = _editorial;
+    user = _user;
+    contrasena = _contrasena;
 }
 
-void Libro::personaje()
+void Cuenta::entrar()
 {
-    cout << "El personaje del libro es Arturo" << endl;
+    cout << "Bienvenido " << user << " su contrasena " << contrasena << " se ha guardado correctamente" << endl;
 }
 
-void Libro::paginas()
+void Cuenta::ObtenerUser()
 {
-    cout << "El libro contiene " << 500 << " paginas" << endl;
+    cout << user << endl;
+}
+
+void Cuenta::ObtenerContr()
+{
+    cout << contrasena << endl;
 }
