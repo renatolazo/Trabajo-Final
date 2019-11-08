@@ -1,8 +1,11 @@
 #include <iostream>
 #include <math.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include "Cuenta.h"
 #include "Libro.h"
+#include "Persona.h"
+#include "Libreria.h"
 
 using namespace std;
 
@@ -11,172 +14,59 @@ using namespace std;
 //persona podra usar filtros para poder encontrar mas rapido el libro deseado, ademas el usuario tendra
 //la posibilidad de tener en una biblioteca virtual los libros que haya adquirido anteriormente
 
-/*int main()
+int main()
 {
-    int n, opcion;
-
+    int opcion;
     do
     {
         cout << "\n   1. Ingresar" << endl;
-        cout << "\n   2. Calcular la mitad de un numero entero" << endl;
-        cout << "\n   3. Calcular el cuadrado de un numero entero" << endl;
-        cout << "\n   4. Salir" << endl;
-        cout << "\n\n   Introduzca opcion (1-4): " << endl;
-
-        scanf( "%d", &opcion );
-
+        cout << "\n   2. Acerca de" << endl;
+        cout << "\n   3. Salir" << endl;
+        cout << "\n\n   Introduzca opcion (1-3): " << endl;
+        cin >> opcion;
         //Inicio del anidamiento
-
         switch ( opcion )
         {
-            case 1: cout << "\n   Introduzca su nombre " << endl;
-                    scanf( "%d", &n );
-                    cout << "Ese nombre no esta registrado en la base de datos" << endl;
+            case 1: int x;
+                    cout << "\n   1. Laura" << endl;
+                    cout << "\n   2. Raul" << endl;
+                    cout << "\n   3. Miguel" << endl;
+                    cout << "\n\n    Introduzca una opcion (1-3)" << endl;
+                    switch ( x )
+                    {
+                        case 1: cout << "\n   1. Mis Libros 1" << endl;
+                                cout << "\n   2. Libros" << endl;
+                                break;
+                        case 2: cout << "\n   1. Mis Libros 2" << endl;
+                                cout << "\n   2. Libros" << endl;
+                                break;
+                        case 3: cout << "\n   1. Mis Libros 3" << endl;
+                                cout << "\n   2. Libros" << endl;
+                                break;
+                    }
                     break;
-
-            case 2: cout << "\n   Introduzca un numero entero " << endl;
-                    scanf( "%d", &n );
-                    cout << "\n   La mitad de " << n << " es " << n / 2 << endl;
+            case 2: int y;
+                    cout << "\n   1. Autores" << endl;
+                    cout << "\n   2. Obras" << endl;
+                    cout << "\n   3. Librerias" << endl;
+                    cout << "\n\n    Introduzca una opcion (1-3)" << endl;
+                    switch ( y )
+                    {
+                        case 1: cout << "Charles Dickens, Edgar Alan Poe, Stephen King" << endl;
+                                break;
+                        case 2: cout << "Game of Thrones, Harry Potter, Los Juegos del Hambre" << endl;
+                                break;
+                        case 3: cout << "Livraria Ler Devagar, Atlantis Books, Barter Books" << endl;
+                                break;
+                    }
                     break;
-
-            case 3: cout << "\n   Introduzca un numero entero " << endl;
-                    scanf( "%d", &n );
-                    cout << "\n   El cuadrado de " << n << " es " << pow( n, 2 ) << endl;
-                    break;
-         }
-
+        }
          //Fin del anidamiento
-
-    } while ( opcion != 4 );
-
+    }while ( opcion != 3 );
     return 0;
-}*/
-
-/*class Cuenta
-{
-private:
-    string user;
-    string contrasena;
-public:
-    Cuenta(string, string);
-    void ObtenerUser();
-    void ObtenerContr();
-    void entrar();
-};*/
-
-/*class Libro
-{
-private:
-    int fecha;
-    string autor;
-    string genero;
-    string editorial;
-public:
-    Libro(int, string, string, string);
-    void personaje();
-    void paginas();
-};*/
-
-class Persona
-{
-private:
-    int edad;
-    string nombre;
-public:
-    Persona(int , string);
-    int ObtenerEdad();
-    void leer();
-    void obtener();
-};
-
-class Libreria
-{
-private:
-    string calle;
-    string ciudad;
-public:
-    Libreria(string, string);
-    void sitio();
-    void lugar();
-};
-
-/*Cuenta::Cuenta(string _user, string _contrasena)
-{
-    user = _user;
-    contrasena = _contrasena;
 }
 
-void Cuenta::entrar()
-{
-    cout << "Bienvenido " << user << " su contrasena " << contrasena << " se ha guardado correctamente" << endl;
-}
-
-void Cuenta::ObtenerUser()
-{
-    cout << user << endl;
-}
-
-void Cuenta::ObtenerContr()
-{
-    cout << contrasena << endl;
-}*/
-
-/*Libro::Libro(int _fecha, string _autor, string _genero, string _editorial)
-{
-    fecha = _fecha;
-    autor = _autor;
-    genero = _genero;
-    editorial = _editorial;
-}
-
-void Libro::personaje()
-{
-    cout << "El personaje del libro es Arturo" << endl;
-}
-
-void Libro::paginas()
-{
-    cout << "El libro contiene " << 500 << " paginas" << endl;
-}*/
-
-Persona::Persona(int _edad, string _nombre)
-{
-    edad = _edad;
-    nombre = _nombre;
-}
-
-void Persona::leer()
-{
-    cout << nombre << " esta leyendo el libro" << endl;
-}
-
-void Persona::obtener()
-{
-    cout << "La persona de edad " << edad << " obtuvo el libro" << endl;
-}
-
-int Persona::ObtenerEdad()
-{
-    return edad;
-}
-
-Libreria::Libreria(string _calle, string _ciudad)
-{
-    calle = _calle;
-    ciudad = _ciudad;
-}
-
-void Libreria::sitio()
-{
-    cout << "El libro se encuentra en la calle " << calle << endl;
-}
-
-void Libreria::lugar()
-{
-    cout << "El libro se encuentra en la ciudad " << ciudad << endl;
-}
-
-int main()
+/*int main()
 {
     int p1_int;
     string p1_str;
@@ -208,8 +98,8 @@ int main()
     p1.leer();
     p2.obtener();
     l1.personaje();
-    l2.paginas();
+    l2.paginas();*/
     /*if(Libro(_fecha)<1800 and Libro(_fecha)>2019)
         cout << "Fecha incorrecta" << endl;*/
-    return 0;
-}
+    /*return 0;
+}*/
