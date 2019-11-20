@@ -99,7 +99,10 @@ int main()
     p2.obtener();
     l1.personaje();
     l2.paginas();*/
+    libI1.sobre();
+    libE1.sobre();
     /*if(Libro(_fecha)<1800 and Libro(_fecha)>2019)
         cout << "Fecha incorrecta" << endl;*/
-    /*return 0;
-}*/
+    return 0;
+}
+
