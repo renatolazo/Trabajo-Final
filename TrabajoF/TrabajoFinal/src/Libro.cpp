@@ -18,3 +18,7 @@ void Libro::paginas()
 {
     cout << "El libro contiene " << 500 << " paginas" << endl;
 }
+void Libro::sobre()
+{
+    cout << "El libro trata sobre " << endl;
+}
