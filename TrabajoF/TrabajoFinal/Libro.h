@@ -15,6 +15,7 @@ public:
     Libro(int, string, string, string);
     void personaje();
     void paginas();
+    virtual void sobre();
 };
 
 #endif // LIBRO_H
