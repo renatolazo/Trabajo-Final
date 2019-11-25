@@ -21,13 +21,21 @@ using namespace std;
 
 
 
-
 int main()
 {
+    Cuenta c1(1, "Laura");
+    Cuenta c2(2, "Raul");
+    Cuenta c3(3, "Miguel");
+    Libreria lib1("Libreria Lello", "Portugal");
+    Libreria lib2("El Ateneo Gran Splendid", "Argentina");
+    Libreria lib3("Libreria del Virrey", "Peru");
+    Libreria lib4("Polare Maastricht", "Paises Bajos");
+    Libreria lib5("Librairie des Colonnes", "Marruecos");
+    Libreria lib6("Shakespeare and Co.", "Francia");
+    Libreria lib7("Cook and Book", "Belgica");
     int opcion;
-
     do
-    { cout << "\n   1. Ingresar" << endl;
+    {   cout << "\n   1. Ingresar" << endl;
         cout << "\n   2. Acerca de" << endl;
         cout << "\n   3. Salir" << endl;
         cout << "\n\n   Introduzca opcion (1-3): " << endl;
@@ -36,65 +44,128 @@ int main()
         switch ( opcion )
         {
             case 1: int opc1;
-                    cout << "\n   1. Laura" << endl;
-                    cout << "\n   2. Raul" << endl;
-                    cout << "\n   3. Miguel" << endl;
+                    c1.ObtenerUser();
+                    c2.ObtenerUser();
+                    c3.ObtenerUser();
                     cout << "\n\n    Introduzca una opcion (1-3)" << endl;
                     cin >> opc1;
                     switch ( opc1 )
                     {
                         case 1: int x;
+                                c1.entrar();
                                 cout << "\n   1. Mis Libros 1" << endl;
                                 cout << "\n   2. Libros" << endl;
                                 cout << "\n\n    Introduzca una opcion (1-2)" << endl;
                                 cin >> x;
                                 switch ( x )
                                 {
-                                    case 1: cout << "\n   1. HarryPotter, After, ElDestello" << endl;
-
+                                    case 1: int a;
+                                            cout << "\n   HarryPotter, After, ElDestello" << endl;
+                                            cout << "\n   1. Precione cualquier numero para volver al menu principal" << endl;
+                                            cin >> a;
+                                            switch ( a )
+                                            {
+                                                case 1: int main;
+                                                        cout << "\n   1. Volver al menu principal" << endl;
+                                                        system("cls");
+                                                        break;
+                                            }
                                             break;
-                                    case 2: cout << "\n   1. Celopan, Quidditch, Ebano, ElRioBajaSucio, HarryPotter,";
-                                            cout << "        ElDespertarDeLasMusas, LaAbuela, ElDestello, CazadoresDeSombras,";
-                                            cout << "        CazadoresDeSombras2, CazadoresDeSombras3, ElCorredorDelLaberinto,";
-                                            cout << "        LaMisionDeRox, After, ElLazarilloDeTormes, ElChicoDelUkelele";
+                                    case 2: int b;
+                                            cout << "\n   Celopan, Quidditch, Ebano, ElRioBajaSucio, HarryPotter,";
+                                            cout << " ElDespertarDeLasMusas, LaAbuela, ElDestello, CazadoresDeSombras,";
+                                            cout << " CazadoresDeSombras2, CazadoresDeSombras3, ElCorredorDelLaberinto,";
+                                            cout << " LaMisionDeRox, After, ElLazarilloDeTormes, ElChicoDelUkelele";
+                                            cout << "\n   1. Precione cualquier numero para volver al menu principal" << endl;
+                                            cin >> b;
+                                            system("cls");
+                                            switch ( b )
+                                            {
+                                                case 1: int main;
+                                                        cout << "\n   1. Volver al menu principal" << endl;
+                                                        system("cls");
+                                                        break;
+                                            }
                                             system("cls");
                                             break;
                                 }
                                 system("cls");
                                 break;
                         case 2: int y;
+                                c2.entrar();
                                 cout << "\n   1. Mis Libros 2" << endl;
                                 cout << "\n   2. Libros" << endl;
                                 cout << "\n\n    Introduzca una opcion (1-2)" << endl;
                                 cin >> y;
                                 switch ( y )
                                 {
-                                    case 1: cout << "\n   1. Celopan, LaMisionDeRox, LaAbuela" << endl;
+                                    case 1: int aa;
+                                            cout << "\n   Celopan, LaMisionDeRox, LaAbuela" << endl;
+                                            cout << "\n   1. Precione cualquier numero para volver al menu principal" << endl;
+                                            cin >> aa;
+                                            switch ( aa )
+                                            {
+                                                case 1: int main;
+                                                        cout << "\n   1. Volver al menu principal" << endl;
+                                                        system("cls");
+                                                        break;
+                                            }
                                             system("cls");
                                             break;
-                                    case 2: cout << "\n   1. Celopan, Quidditch, Ebano, ElRioBajaSucio, HarryPotter,";
-                                            cout << "        ElDespertarDeLasMusas, LaAbuela, ElDestello, CazadoresDeSombras,";
-                                            cout << "        CazadoresDeSombras2, CazadoresDeSombras3, ElCorredorDelLaberinto,";
-                                            cout << "        LaMisionDeRox, After, ElLazarilloDeTormes, ElChicoDelUkelele";
+                                    case 2: int bb;
+                                            cout << "\n   Celopan, Quidditch, Ebano, ElRioBajaSucio, HarryPotter,";
+                                            cout << " ElDespertarDeLasMusas, LaAbuela, ElDestello, CazadoresDeSombras,";
+                                            cout << " CazadoresDeSombras2, CazadoresDeSombras3, ElCorredorDelLaberinto,";
+                                            cout << " LaMisionDeRox, After, ElLazarilloDeTormes, ElChicoDelUkelele";
+                                            cout << "\n   1. Precione cualquier numero para volver al menu principal" << endl;
+                                            cin >> bb;
+                                            switch ( bb )
+                                            {
+                                                case 1: int main;
+                                                        cout << "\n   1. Volver al menu principal" << endl;
+                                                        system("cls");
+                                                        break;
+                                            }
                                             system("cls");
                                             break;
                                 }
                                 system("cls");
                                 break;
                         case 3: int z;
+                                c3.entrar();
                                 cout << "\n   1. Mis Libros 3" << endl;
                                 cout << "\n   2. Libros" << endl;
                                 cout << "\n\n    Introduzca una opcion (1-2)" << endl;
                                 cin >> z;
                                 switch ( z )
                                 {
-                                    case 1: cout << "\n   1. CazadoresDeSombras, CazadoresDeSombras2, CazadoresDeSombras3" << endl;
+                                    case 1: int aaa;
+                                            cout << "\n   CazadoresDeSombras, CazadoresDeSombras2, CazadoresDeSombras3" << endl;
+                                            cout << "\n   1. Precione cualquier numero para volver al menu principal" << endl;
+                                            cin >> aaa;
+                                            switch ( aaa )
+                                            {
+                                                case 1: int main;
+                                                        cout << "\n   1. Volver al menu principal" << endl;
+                                                        system("cls");
+                                                        break;
+                                            }
                                             system("cls");
                                             break;
-                                    case 2: cout << "\n   1. Celopan, Quidditch, Ebano, ElRioBajaSucio, HarryPotter,";
-                                            cout << "        ElDespertarDeLasMusas, LaAbuela, ElDestello, CazadoresDeSombras,";
-                                            cout << "        CazadoresDeSombras2, CazadoresDeSombras3, ElCorredorDelLaberinto,";
-                                            cout << "        LaMisionDeRox, After, ElLazarilloDeTormes, ElChicoDelUkelele";
+                                    case 2: int bbb;
+                                            cout << "\n   Celopan, Quidditch, Ebano, ElRioBajaSucio, HarryPotter,";
+                                            cout << " ElDespertarDeLasMusas, LaAbuela, ElDestello, CazadoresDeSombras,";
+                                            cout << " CazadoresDeSombras2, CazadoresDeSombras3, ElCorredorDelLaberinto,";
+                                            cout << " LaMisionDeRox, After, ElLazarilloDeTormes, ElChicoDelUkelele";
+                                            cout << "\n   1. Precione cualquier numero para volver al menu principal" << endl;
+                                            cin >> bbb;
+                                            switch ( bbb )
+                                            {
+                                                case 1: int main;
+                                                        cout << "\n   1. Volver al menu principal" << endl;
+                                                        system("cls");
+                                                        break;
+                                            }
                                             system("cls");
                                             break;
                                 }
@@ -105,19 +176,121 @@ int main()
                     break;
             case 2: int opc2;
                     cout << "\n   1. Autores" << endl;
-                    cout << "\n   2. Obras" << endl;
-                    cout << "\n   3. Librerias" << endl;
+                    cout << "\n   2. Librerias" << endl;
                     cout << "\n\n    Introduzca una opcion (1-3)" << endl;
                     cin >> opc2;
                     switch ( opc2 )
                     {
-                        case 1: cout << "Charles Dickens, Edgar Alan Poe, Stephen King" << endl;
+                        case 1: int opca;
+                                cout << "\n   Charles Dickens, Edgar Alan Poe, Stephen King" << endl;
+                                cout << "\n   1. Precione cualquier numero para volver al menu principal" << endl;
+                                cin >> opca;
+                                switch ( opca )
+                                {
+                                    case 1: int main;
+                                            cout << "\n   1. Volver al menu principal" << endl;
+                                            system("cls");
+                                            break;
+                                }
                                 system("cls");
                                 break;
-                        case 2: cout << "Game of Thrones, Harry Potter, Los Juegos del Hambre" << endl;
-                                system("cls");
-                                break;
-                        case 3: cout << "Livraria Ler Devagar, Atlantis Books, Barter Books" << endl;
+                        case 2: int opcb;
+                                cout << "\n   1. ";lib1.obtenerLibreria();
+                                cout << "\n   2. ";lib2.obtenerLibreria();
+                                cout << "\n   3. ";lib3.obtenerLibreria();
+                                cout << "\n   4. ";lib4.obtenerLibreria();
+                                cout << "\n   5. ";lib5.obtenerLibreria();
+                                cout << "\n   6. ";lib6.obtenerLibreria();
+                                cout << "\n   7. ";lib7.obtenerLibreria();
+                                cout << "\n   8. Precione cualquier numero para volver al menu principal" << endl;
+                                cin >> opcb;
+                                switch ( opcb )
+                                {
+                                    case 1: int opcb1;
+                                            lib1.ubicacion();
+                                            cin >> opcb1;
+                                            switch ( opcb1 )
+                                            {
+                                                case 1: int main;
+                                                        cout << "\n   1. Volver al menu principal" << endl;
+                                                        system("cls");
+                                                        break;
+                                            }
+                                            system("cls");
+                                            break;
+                                    case 2: int opcb2;
+                                            lib2.ubicacion();
+                                            cin >> opcb2;
+                                            switch ( opcb2 )
+                                            {
+                                                case 1: int main;
+                                                        cout << "\n   1. Volver al menu principal" << endl;
+                                                        system("cls");
+                                                        break;
+                                            }
+                                            system("cls");
+                                            break;
+                                    case 3: int opcb3;
+                                            lib3.ubicacion();
+                                            cin >> opcb3;
+                                            switch ( opcb3 )
+                                            {
+                                                case 1: int main;
+                                                        cout << "\n   1. Volver al menu principal" << endl;
+                                                        system("cls");
+                                                        break;
+                                            }
+                                            system("cls");
+                                            break;
+                                    case 4: int opcb4;
+                                            lib4.ubicacion();
+                                            cin >> opcb4;
+                                            switch ( opcb4 )
+                                            {
+                                                case 1: int main;
+                                                        cout << "\n   1. Volver al menu principal" << endl;
+                                                        system("cls");
+                                                        break;
+                                            }
+                                            system("cls");
+                                            break;
+                                    case 5: int opcb5;
+                                            lib5.ubicacion();
+                                            cin >> opcb5;
+                                            switch ( opcb5 )
+                                            {
+                                                case 1: int main;
+                                                        cout << "\n   1. Volver al menu principal" << endl;
+                                                        system("cls");
+                                                        break;
+                                            }
+                                            system("cls");
+                                            break;
+                                    case 6: int opcb6;
+                                            lib6.ubicacion();
+                                            cin >> opcb6;
+                                            switch ( opcb6 )
+                                            {
+                                                case 1: int main;
+                                                        cout << "\n   1. Volver al menu principal" << endl;
+                                                        system("cls");
+                                                        break;
+                                            }
+                                            system("cls");
+                                            break;
+                                    case 7: int opcb7;
+                                            lib7.ubicacion();
+                                            cin >> opcb7;
+                                            switch ( opcb7 )
+                                            {
+                                                case 1: int main;
+                                                        cout << "\n   1. Volver al menu principal" << endl;
+                                                        system("cls");
+                                                        break;
+                                            }
+                                            system("cls");
+                                            break;
+                                }
                                 system("cls");
                                 break;
                     }
