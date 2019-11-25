@@ -7,12 +7,12 @@ using namespace std;
 class Libreria
 {
 private:
-    string calle;
-    string ciudad;
+    string NombreLibreria;
+    string pais;
 public:
     Libreria(string, string);
-    void sitio();
-    void lugar();
+    void obtenerLibreria();
+    void ubicacion();
 };
 
 #endif // LIBRERIA_H
