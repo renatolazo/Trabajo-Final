@@ -3,18 +3,18 @@
 
 using namespace std;
 
-Libreria::Libreria(string _calle, string _ciudad)
+Libreria::Libreria(string _NombreLibreria, string _pais)
 {
-    calle = _calle;
-    ciudad = _ciudad;
+    NombreLibreria = _NombreLibreria;
+    pais = _pais;
 }
 
-void Libreria::sitio()
+void Libreria::obtenerLibreria()
 {
-    cout << "El libro se encuentra en la calle " << calle << endl;
+    cout << NombreLibreria << endl;
 }
 
-void Libreria::lugar()
+void Libreria::ubicacion()
 {
-    cout << "El libro se encuentra en la ciudad " << ciudad << endl;
+    cout << "\n   Esta libreria se encuentra en " << pais << endl;
 }
