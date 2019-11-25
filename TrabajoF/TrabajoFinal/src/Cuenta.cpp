@@ -3,23 +3,18 @@
 
 using namespace std;
 
-Cuenta::Cuenta(string _user, string _contrasena)
+Cuenta::Cuenta(int _OpcionCuenta, string _user)
 {
+    OpcionCuenta = _OpcionCuenta;
     user = _user;
-    contrasena = _contrasena;
 }
 
 void Cuenta::entrar()
 {
-    cout << "Bienvenido " << user << " su contrasena " << contrasena << " se ha guardado correctamente" << endl;
+    cout << "\n   Bienvenid@ " << user << " ,Que accion desea ejecutar?" << endl;
 }
 
 void Cuenta::ObtenerUser()
 {
-    cout << user << endl;
-}
-
-void Cuenta::ObtenerContr()
-{
-    cout << contrasena << endl;
+    cout << "\n   " << OpcionCuenta << ". " << user << endl;
 }
