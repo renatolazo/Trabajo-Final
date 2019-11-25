@@ -7,12 +7,11 @@ using namespace std;
 class Cuenta
 {
 private:
+    int OpcionCuenta;
     string user;
-    string contrasena;
 public:
-    Cuenta(string, string);
+    Cuenta(int, string);
     void ObtenerUser();
-    void ObtenerContr();
     void entrar();
 };
 
