@@ -13,6 +13,7 @@ public:
     Cuenta(int, string);
     void ObtenerUser();
     void entrar();
+    int getOpcionCuenta();
 };
 
 #endif // CUENTA_H
