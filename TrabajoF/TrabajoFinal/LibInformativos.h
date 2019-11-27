@@ -8,10 +8,12 @@ using namespace std;
 class LibInformativos : public Libro
 {
 private:
-    string titulo;
+    string titulo2;
+    string materia;
 public:
-    LibInformativos(int, string, string, string, string);
-    void sobre();
+    LibInformativos(int, int, string, string, string);
+    void getSobre();
+    void getTitulo2();
 };
 
 #endif // LIBINFORMATIVOS_H
