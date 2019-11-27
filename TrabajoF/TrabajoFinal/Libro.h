@@ -6,16 +6,15 @@ using namespace std;
 
 class Libro
 {
-private:
+protected:
     int fecha;
+    int NumOpc;
     string autor;
-    string genero;
-    string editorial;
 public:
-    Libro(int, string, string, string);
-    void personaje();
-    void paginas();
-    virtual void sobre();
+    Libro(int, int, string);
+    virtual void getSobre();
+    virtual void getAutor();
+    void getFecha();
 };
 
 #endif // LIBRO_H
