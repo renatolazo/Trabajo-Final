@@ -18,3 +18,8 @@ void Cuenta::ObtenerUser()
 {
     cout << "\n   " << OpcionCuenta << ". " << user << endl;
 }
+
+int Cuenta::getOpcionCuenta()
+{
+    return OpcionCuenta;
+}
