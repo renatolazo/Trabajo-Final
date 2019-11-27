@@ -4,12 +4,19 @@
 
 using namespace std;
 
-LibEpicos::LibEpicos(int _fecha, string _autor, string _genero, string _editorial, string _titulo) : Libro(_fecha,_autor,_genero,_editorial)
+LibEpicos::LibEpicos(int _fecha, int _NumOpc, string _autor, string _titulo1, string _genero) : Libro(_fecha, _NumOpc, _autor)
 {
-    titulo = _titulo;
+    titulo1 = _titulo1;
+    genero = _genero;
 }
 
-void LibEpicos::sobre()
+void LibEpicos::getSobre()
 {
-    cout << "las historias de los heroes de la era medieval" << endl;
+    Libro::getSobre();
+    cout << "\n   3. Genero: " << genero << endl;
+}
+
+void LibEpicos::getTitulo1()
+{
+    cout << titulo1 << endl;
 }
