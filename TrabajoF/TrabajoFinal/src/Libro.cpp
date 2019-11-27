@@ -3,22 +3,25 @@
 
 using namespace std;
 
-Libro::Libro(int _fecha, string _autor, string _genero, string _editorial)
+Libro::Libro(int _fecha, int _NumOpc, string _autor)
 {
     fecha = _fecha;
+    NumOpc = _NumOpc;
     autor = _autor;
-    genero = _genero;
-    editorial = _editorial;
 }
-void Libro::personaje()
+
+void Libro::getSobre()
 {
-    cout << "El personaje del libro es Arturo" << endl;
+    cout << "\n   1. Autor: " << autor << endl;
+    cout << "\n   2. Fecha: " << fecha << endl;
 }
-void Libro::paginas()
+
+void Libro::getAutor()
 {
-    cout << "El libro contiene " << 500 << " paginas" << endl;
+    cout << autor << endl;
 }
-void Libro::sobre()
+
+void Libro::getFecha()
 {
-    cout << "El libro trata sobre " << endl;
+    cout << fecha << endl;
 }
