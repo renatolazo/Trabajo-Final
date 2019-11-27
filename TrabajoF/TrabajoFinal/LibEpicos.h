@@ -8,10 +8,12 @@ using namespace std;
 class LibEpicos : public Libro
 {
 private:
-    string titulo;
+    string titulo1;
+    string genero;
 public:
-    LibEpicos(int, string, string, string, string);
-    void sobre();
+    LibEpicos(int, int, string, string, string);
+    void getSobre();
+    void getTitulo1();
 };
 
 #endif // LIBEPICOS_H
