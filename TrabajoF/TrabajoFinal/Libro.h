@@ -13,7 +13,7 @@ protected:
 public:
     Libro(int, int, string);
     virtual void getSobre();
-    virtual void getAutor();
+    void getAutor();
     void getFecha();
 };
 
